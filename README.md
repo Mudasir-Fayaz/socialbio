@@ -1,4 +1,4 @@
-## [Social Bio Generator](https://socialbioai.vercel.com)
+## [Social Bio Generator](https://socialbioai.vercel.app)
 
 This project generates bio for almost every social media platform with the help of AI
 
