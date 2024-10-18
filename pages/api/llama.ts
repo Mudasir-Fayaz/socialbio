@@ -5,8 +5,15 @@ if (!process.env.TOGETHER_API_KEY) {
 }
 
 export const config = {
-  runtime: "edge",
+  runtime: 'edge', // Only for Edge API Routes
+  unstable_allowDynamic: [
+    // Allows dynamic evaluation in a specific file
+    '/lib/utilities.js',
+    // Allows dynamic evaluation in any files inside the specified 3rd party module
+    '/node_modules/function-bind/**',
+  ],
 };
+
 
 const together = new Together({
   apiKey: process.env.TOGETHER_API_KEY,
@@ -44,8 +51,8 @@ const handler = async (req: Request): Promise<Response> => {
     });
   
    
-    let rawResponse;
-    let generatedBios;
+    let rawResponse: string | null | undefined = '';
+    let generatedBios: {} = {};
     rawResponse = response.choices[0].message?.content;
     generatedBios = JSON.parse(rawResponse || '[]')
 

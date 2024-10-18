@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -16,7 +17,7 @@ export default function Footer() {
        
       </div>
 
-      <a href="https://www.buymeacoffee.com/MudasirFayaz" target="_blank"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=☕&slug=MudasirFayaz&button_colour=40DCA5&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00" /></a>
+      <a href="https://www.buymeacoffee.com/MudasirFayaz" target="_blank"><Image src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=☕&slug=MudasirFayaz&button_colour=40DCA5&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00" alt="Buy me a coffee" width={250} height={180}/></a>
 
       <div className="flex space-x-4 pb-4 sm:pb-0">
         <Link

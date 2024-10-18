@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { useTheme } from 'next-themes'
+
 import {  Loader2, CopyIcon } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { Button } from "@/components/ui/button"
@@ -39,7 +39,7 @@ export default function BioGenerator() {
   const [generatedBio, setGeneratedBio] = useState<Bio[]>([])
   const [isGenerating, setIsGenerating] = useState(false)
   const [error, setError] = useState(false)
-  const { theme, setTheme } = useTheme()
+  
 
   const handleGenerate = async () => {
 
