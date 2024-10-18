@@ -31,7 +31,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
          <NextUIProvider>
-      <NextThemesProvider attribute="class" defaultTheme="dark">
+      <NextThemesProvider attribute="class" defaultTheme="light">
         {children}
       </NextThemesProvider>
     </NextUIProvider>
